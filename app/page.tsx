@@ -1,8 +1,12 @@
 import Image from "next/image";
+import GroupHeader from "./components/GroupHeader";
+import Footer from "./components/GroupFooter";
 
 export default function GroupHome() {
   return (
     <>
+    {/* HEADER */}
+      <GroupHeader />
       {/* PAGE CONTENT */}
       <main className="bg-[#f5f7fb]">
         <section className="max-w-7xl mx-auto px-6 md:px-10 py-14 animate-fade-in">
@@ -268,7 +272,8 @@ export default function GroupHome() {
         </section>
       </main>
       
-
+{/* FOOTER */}
+      <Footer />
     </>
     
   );
