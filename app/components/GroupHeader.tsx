@@ -22,18 +22,19 @@ export default function GroupHeader() {
   <div className="bg-[#2d459c]">
     <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 flex flex-col md:flex-row items-center md:items-center gap-4">
 
-      {/* LOGO */}
-      <Link href="/" className="block">
-        <div className="w-[280px] h-[110px] relative bg-white rounded-xl shadow-md border border-white/40 overflow-hidden">
-          <Image
-            src="/1st-calluk-group-logo.jpg"
-            alt="1st Call UK Group Logo"
-            fill
-            priority
-            className="object-contain scale-[1.18]"
-          />
-        </div>
-      </Link>
+     {/* LOGO */}
+<Link href="/" className="block md:ml-6">
+  <div className="w-[280px] h-[110px] relative bg-white rounded-xl shadow-md border border-white/40 overflow-hidden">
+    <Image
+      src="/1st-calluk-group-logo.jpg"
+      alt="1st Call UK Group Logo"
+      fill
+      priority
+      className="object-contain scale-[1.18]"
+    />
+  </div>
+</Link>
+
 
       {/* CENTERED GROUP STATEMENT */}
       <div className="md:ml-auto text-center md:text-right">
