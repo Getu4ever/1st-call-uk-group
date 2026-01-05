@@ -52,7 +52,7 @@ export default function GroupHome() {
                   </p>
 
                   <a
-                    href="https://1stcalluk.com"
+                    href="https://1stcalluk-96op.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-[#233a86] text-white font-semibold py-3 rounded-lg hover:bg-[#1e2f6f] transition"
@@ -85,7 +85,7 @@ export default function GroupHome() {
                   </p>
 
                   <a
-                    href="https://1stcalluk.financial"
+                    href="https://1st-call-financial.vercel.app/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-[#233a86] text-white font-semibold py-3 rounded-lg hover:bg-[#1e2f6f] transition"

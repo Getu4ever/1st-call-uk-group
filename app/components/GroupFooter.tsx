@@ -43,7 +43,7 @@ export default function GroupFooter() {
             <ul className="space-y-3 text-white/80 text-sm">
               <li>
                 <a
-                  href="https://1stcalluk.com"
+                  href="https://1stcalluk-96op.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
@@ -53,7 +53,7 @@ export default function GroupFooter() {
               </li>
               <li>
                 <a
-                  href="https://1stcalluk.financial"
+                  href="https://1st-call-financial.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
@@ -109,7 +109,7 @@ export default function GroupFooter() {
     </a>
   </p>
 </div>
-
+                         
 
         </div>
 
