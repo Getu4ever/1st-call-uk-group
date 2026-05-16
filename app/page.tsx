@@ -138,9 +138,9 @@ export default function GroupHome() {
           
           {/* INTRO WITH CORRECT SINGLE H1 TAG FOR SEO SUPREMACY */}
           <div className="animate-slide-up opacity-0">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-center text-[#233a86] mb-6">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-center text-[#233a86] mb-6">
               1st Call UK Group
-            </h1>
+            </h2>
 
             <p className="text-gray-700 text-lg text-center max-w-3xl mx-auto mb-16 leading-relaxed">
               A corporate group of premier professional services based in Nottingham, delivering trusted
