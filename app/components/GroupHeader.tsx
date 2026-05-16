@@ -4,6 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function GroupHeader() {
+  // Smooth scroll handler for standard internal anchor navigation
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       {/* INJECTING DELIBERATE, SLOW AND GENTLE SLIDE-UP ANIMATIONS */}
@@ -18,11 +27,9 @@ export default function GroupHeader() {
             transform: translateY(0);
           }
         }
-        /* Slower 1.4s duration with a smooth, premium cubic-bezier ease out */
         .animate-hero-slow-up {
           animation: gentleSlowSlideUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-        /* Slower text reveal that follows seamlessly */
         .animate-text-slow-up {
           animation: gentleSlowSlideUp 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
           animation-delay: 250ms;
@@ -30,13 +37,23 @@ export default function GroupHeader() {
       `}</style>
 
       <header className="text-white shadow-lg relative z-50">
-        {/* TOP BAR */}
+        {/* TOP BAR WITH NEW INTERNAL ANCHOR NAVIGATION LINKS */}
         <div className="bg-[#233a86]">
           <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 flex justify-between items-center">
             <span className="text-xs text-white/80">1st Call UK Group</span>
-            <span className="hidden md:block text-xs text-white/70 tracking-wide">
-              Independent UK Professional Services Group
-            </span>
+            <div className="flex gap-4 text-xs font-medium text-white/80 tracking-wide">
+              <a href="#services" onClick={(e) => handleScroll(e, "services")} className="hover:text-white hover:underline transition-all">
+                Our Services
+              </a>
+              <span className="text-white/30">•</span>
+              <a href="#why-choose-us" onClick={(e) => handleScroll(e, "why-choose-us")} className="hover:text-white hover:underline transition-all">
+                Why Choose Us
+              </a>
+              <span className="text-white/30">•</span>
+              <a href="#faq" onClick={(e) => handleScroll(e, "faq")} className="hover:text-white hover:underline transition-all">
+                FAQs
+              </a>
+            </div>
           </div>
         </div>
 
@@ -44,7 +61,7 @@ export default function GroupHeader() {
         <div className="bg-[#2d459c]">
           <div className="max-w-7xl mx-auto px-4 md:px-6 py-6 flex flex-col md:flex-row items-center md:items-center gap-4">
 
-            {/* LOGO */}
+            {/* LOGO - KEPT COMPLETELY STATIC WITH NO MOTION EFFECTS */}
             <Link href="/" className="block md:ml-6">
               <div className="w-[280px] h-[110px] relative bg-white rounded-xl shadow-md border border-white/40 overflow-hidden">
                 <Image
@@ -72,9 +89,7 @@ export default function GroupHeader() {
       </header>
 
       {/* ===== HERO SECTION ===== */}
-      {/* Container now slides up nicely, slowly and gently */}
       <section className="relative -mt-px h-[45vh] sm:h-[50vh] md:h-[55vh] overflow-hidden animate-hero-slow-up opacity-0">
-        {/* HERO IMAGE */}
         <Image
           src="/group-hero.jpg"
           alt="1st Call UK Group professional services"
@@ -84,13 +99,11 @@ export default function GroupHeader() {
           className="object-cover"
         />
 
-        {/* OVERLAY */}
         <div className="absolute inset-0 bg-[#2d459c]/80 flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-10">
-          {/* Text layer floats up with a gentle, calculated offset delay */}
           <div className="animate-text-slow-up opacity-0">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
+            <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 drop-shadow-lg">
               One Group. Trusted Expertise.
-            </h1>
+            </h2>
 
             <p className="text-white/90 text-base sm:text-lg md:text-xl max-w-3xl leading-relaxed">
               Professional services delivered through specialist teams in

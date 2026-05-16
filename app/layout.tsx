@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import ClientLayoutWrapper from "./ClientLayoutWrapper"; // Separate hook wrapper logic
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,47 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// ADVANCED SEO METADATA ENGINE
+// SERVER-SIDE SEO METADATA (Perfect length optimization matching search constraints)
 export const metadata: Metadata = {
   title: "1st Call UK Group | Professional Corporate Services Nottingham",
-  description: "1st Call UK Group brings together trusted professional specialists across immigration consultancy, accounting, chartered financial advisory, and corporate digital solutions.",
-  keywords: ["1st Call UK Group", "Professional Services Nottingham", "Immigration Advisers UK", "Chartered Accountants Nottingham", "Financial Advisers UK", "Corporate Business Solutions"],
-  metadataBase: new URL("https://www.1stcalluk.co.uk"),
+  description: "1st Call UK Group brings together trusted professional specialists across immigration consultancy, accounting, and chartered financial advisory services.",
   alternates: {
-    canonical: "/",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_GB",
-    url: "https://www.1stcalluk.co.uk",
-    title: "1st Call UK Group | Professional Corporate Services",
-    description: "Delivering premier expertise across regulated immigration routes, tax accountancy, wealth advisory, and corporate web engineering under one trusted umbrella.",
-    siteName: "1st Call UK Group",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "1st Call UK Group Corporate Banner",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "1st Call UK Group | Professional Services",
-    description: "Regulated corporate immigration, professional financial consulting, and modern enterprise technical growth strategies.",
-    images: ["/og-image.jpg"],
+    canonical: "https://www.1stcalluk.co.uk",
   },
 };
 
@@ -61,7 +27,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
+  
   // JSON-LD STRUCTURED DATA SCHEMA FOR INTER-CONNECTED WEBSITES
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -82,7 +48,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className="scroll-smooth">
       <head>
         <script
           type="application/ld+json"
@@ -90,17 +56,12 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col overflow-x-hidden relative`}
       >
-        {/* PAGE CONTENT */}
-        <main className="flex-grow">
+        {/* CLIENT INTERACTION AND STRUCTURAL RENDERING CONTENT FRAMEWORK */}
+        <ClientLayoutWrapper>
           {children}
-        </main>
-
-        {/* COPYRIGHT BAR — FINAL ELEMENT */}
-        <div className="bg-black text-gray-400 text-center py-3 text-xs border-t border-gray-800">
-          © {new Date().getFullYear()} 1st Call UK Group. All rights reserved.
-        </div>
+        </ClientLayoutWrapper>
       </body>
     </html>
   );
