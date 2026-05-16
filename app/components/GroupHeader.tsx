@@ -26,7 +26,7 @@ export default function GroupHeader() {
 <Link href="/" className="block md:ml-6">
   <div className="w-[280px] h-[110px] relative bg-white rounded-xl shadow-md border border-white/40 overflow-hidden">
     <Image
-      src="/1st-calluk-group-logo.jpg"
+      src="/1st-calluk-group-logo02.jpg"
       alt="1st Call UK Group Logo"
       fill
       priority

@@ -12,7 +12,7 @@ export default function GroupFooter() {
           <div>
             <div className="relative w-[220px] h-[90px] mb-4 bg-white rounded-lg overflow-hidden">
               <Image
-                src="/1st-calluk-group-logo.jpg"
+                src="/1st-calluk-group-logo02.jpg"
                 alt="1st Call UK Group"
                 fill
                 className="object-contain"
@@ -43,7 +43,7 @@ export default function GroupFooter() {
             <ul className="space-y-3 text-white/80 text-sm">
               <li>
                 <a
-                  href="https://1stcalluk-96op.vercel.app/"
+                  href="https://www.1stcalluk.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
@@ -53,7 +53,7 @@ export default function GroupFooter() {
               </li>
               <li>
                 <a
-                  href="https://1st-call-financial.vercel.app/"
+                  href="https://www.1stcalluk.financial/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
