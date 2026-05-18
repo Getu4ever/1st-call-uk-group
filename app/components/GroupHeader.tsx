@@ -36,7 +36,7 @@ export default function GroupHeader() {
         }
       `}</style>
 
-      <header className="text-white shadow-lg relative z-50">
+      <header className="sticky top-0 z-50 text-white shadow-lg">
         {/* TOP BAR WITH NEW INTERNAL ANCHOR NAVIGATION LINKS */}
         <div className="bg-[#233a86]">
           <div className="max-w-7xl mx-auto px-4 md:px-6 py-2 flex justify-between items-center">
